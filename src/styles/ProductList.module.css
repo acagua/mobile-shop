@@ -1,7 +1,24 @@
+.heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 700px) {
+  .heading {
+    justify-content: center;
+  }
+  .title {
+    text-align: center;
+  }
+}
+
 .title {
-  margin: 2rem;
   font-size: 2rem;
   color: var(--darkblue);
+  min-width: 20rem;
 }
 
 .itemList {
