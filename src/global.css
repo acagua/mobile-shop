@@ -24,3 +24,23 @@ body {
     opacity: 1;
   }
 }
+
+.bump:active {
+  transform: scale(0.9);
+  transition-duration: 0.2s;
+  animation: bump;
+}
+
+@keyframes bump {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+}
+
+a {
+  text-decoration: none;
+}

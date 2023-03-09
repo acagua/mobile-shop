@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router-dom';
 import { Breadcrumb } from './components/Breadcrumb';
 import { NavBar } from './components/NavBar';
 
@@ -8,6 +9,7 @@ function App() {
         <NavBar />
         <Breadcrumb />
       </header>
+      <Outlet />
     </>
   );
 }
