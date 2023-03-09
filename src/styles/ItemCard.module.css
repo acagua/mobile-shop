@@ -1,0 +1,31 @@
+.container {
+  min-width: 15rem;
+  border-radius: 1rem;
+  flex: 0 1 20%;
+  margin: 1rem;
+  background-color: var(--gray);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.container > img {
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.price {
+  font-size: 1.3rem;
+}
+
+.container > p:last-child {
+  align-self: flex-end;
+}
+
+.buyButton {
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 1rem;
+  border: none;
+  padding: 0.4rem;
+}

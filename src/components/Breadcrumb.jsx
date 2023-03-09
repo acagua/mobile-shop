@@ -1,3 +1,5 @@
+import styles from '../styles/Breadcrumb.module.css';
+
 export const Breadcrumb = () => {
-  return <div>Breadcrumb</div>;
+  return <div className={styles.container}>Breadcrumb</div>;
 };

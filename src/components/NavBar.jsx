@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 export const NavBar = () => {
   return (
-    <nav className={`${styles.container} fade-in`}>
+    <nav className={styles.container}>
       <Link to="/">
         <div className={styles.logo}>
           <LogoIcon />

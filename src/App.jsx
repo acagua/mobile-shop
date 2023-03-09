@@ -7,9 +7,11 @@ function App() {
     <>
       <header>
         <NavBar />
-        <Breadcrumb />
       </header>
-      <Outlet />
+      <main>
+        <Breadcrumb />
+        <Outlet />
+      </main>
     </>
   );
 }
