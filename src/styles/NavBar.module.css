@@ -1,0 +1,44 @@
+svg {
+  fill: white;
+  width: 3rem;
+}
+
+.container {
+  background-color: var(--darkblue);
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  align-items: center;
+  color: var(--lightblue);
+  display: flex;
+  gap: 1rem;
+  height: 3rem;
+  margin-left: 1rem;
+}
+
+.logo > h1 {
+  font-size: 2rem;
+}
+
+.logo > svg {
+  fill: var(--lightblue);
+  stroke: none;
+  min-width: 3rem;
+}
+
+.cart {
+  fill: var(--lightblue);
+  stroke: none;
+  margin-right: 1rem;
+}
+
+.link {
+  color: var(--gray);
+  justify-self: flex-end;
+  margin-right: 4rem;
+  font-size: 1rem;
+}

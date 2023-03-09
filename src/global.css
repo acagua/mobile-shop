@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+}
+
+:root {
+  --lightblue: #87e7f6;
+  --brightblue: #29d3ee;
+  --blue: #2d526f;
+  --darkblue: #1e374b;
+  --gray: #f0f0f0;
+  --white: #f8f8f8;
+}
+
+.fade-in {
+  animation: fadeIn 1s;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
