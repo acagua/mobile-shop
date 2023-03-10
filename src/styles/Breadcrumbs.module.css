@@ -1,0 +1,19 @@
+.container {
+  padding: 1rem;
+  background-color: var(--gray);
+}
+
+.breadcrumbNotCurrent {
+  color: var(--darkblue);
+}
+.breadcrumbNotCurrent:hover {
+  cursor: text;
+}
+.breadcrumbCurrent {
+  color: var(--blue);
+}
+
+.breadcrumbArrow {
+  margin-left: 10px;
+  margin-right: 10px;
+}

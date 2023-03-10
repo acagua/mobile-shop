@@ -1,35 +1,28 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import { ItemCard } from '../components/ItemCard';
 import { Search } from '../components/Search';
 
 import styles from '../styles/ProductList.module.css';
-import { getAllProducts } from '../utils/api';
 
 export const ProductList = () => {
+  const products = useLoaderData();
+
   const [query, setQuery] = useState();
-
   const searchRef = useRef();
-  const [products, setProducts] = useState([]);
-
-  const fetchProducts = async () => {
-    const fetchedData = await getAllProducts();
-    setProducts(fetchedData);
-  };
-
-  useEffect(() => {
-    fetchProducts();
-  }, []);
 
   const handleOnChange = ({ target }) => {
-    setQuery(target.value);
+    setQuery(target.value.toLowerCase());
     console.log(searchRef.current.value);
   };
 
-  const filteredItems = products.filter((product) => product.brand.includes(query));
+  const filteredItems = products.filter(
+    (product) =>
+      product.brand.toLowerCase().includes(query) || product.model.toLowerCase().includes(query),
+  );
 
+  console.log({ filteredItems });
   const showItems = filteredItems.length ? filteredItems : products;
-
-  console.log({ products, filteredItems });
 
   return (
     <div className="fadeIn">
@@ -37,6 +30,9 @@ export const ProductList = () => {
         <h2 className={styles.title}> Device List </h2>
         <Search onChange={handleOnChange} ref={searchRef} />
       </div>
+      {filteredItems.length === 0 && !!query && (
+        <p className={styles.warning}>No devices found. Showing all catalog</p>
+      )}
       <section className={styles.itemList}>
         {!!products.length &&
           showItems.map(({ id, brand, model, imgUrl, price }) => (
@@ -46,3 +42,4 @@ export const ProductList = () => {
     </div>
   );
 };
+export default ProductList;

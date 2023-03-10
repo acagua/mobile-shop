@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from '../App';
+import { Loading } from '../components/Loading';
 import { NotFoundError } from '../pages/NotFoundError';
 import { ProductDetails } from '../pages/ProductDetails';
-import { ProductList } from '../pages/ProductList';
+import { detailsLoader, productsLoader } from '../utils/loaders';
+
+const LazyProductList = lazy(() => import('../pages/ProductList'));
 
 const router = createBrowserRouter([
   {
@@ -12,10 +15,16 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <ProductList />,
+        loader: productsLoader,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <LazyProductList />
+          </Suspense>
+        ),
       },
       {
         path: 'product/:productId',
+        loader: detailsLoader,
         element: <ProductDetails />,
       },
     ],

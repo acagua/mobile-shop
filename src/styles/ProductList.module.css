@@ -27,3 +27,8 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.warning {
+  background-color: lightblue;
+  padding: 1rem;
+}
