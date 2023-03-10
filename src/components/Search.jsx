@@ -4,12 +4,15 @@ import { debounce } from 'lodash';
 
 import styles from '../styles/Search.module.css';
 
+//reduces re-renders
+const DEBOUCE_TIME = 250;
+
 export const Search = React.forwardRef((props, ref) => {
   const { onChange } = props;
 
   const debouncedOnChange = debounce((event) => {
     onChange(event);
-  }, 1000);
+  }, DEBOUCE_TIME);
 
   return (
     <input
