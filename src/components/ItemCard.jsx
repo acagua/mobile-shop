@@ -1,26 +1,35 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import cat from '../assets/cat.jpeg';
 import styles from '../styles/ItemCard.module.css';
 import { currencyFormatter } from '../utils/currency';
 import { Link } from 'react-router-dom';
-export const ItemCard = () => {
+
+export const ItemCard = ({ id, brand, model, imgUrl, price }) => {
   const handleOnClick = () => {
     //
   };
 
   return (
     <div className={styles.container}>
-      <img src={cat} />
+      <img src={imgUrl} />
       <p className={styles.specs}>
-        iPhone by <strong>Apple</strong>
+        {model} by <strong>{brand}</strong>
       </p>
-      <p className={styles.price}>{currencyFormatter.format(500)}</p>
-      <Link to={`product/${1}`}>
+      <p className={styles.price}>{currencyFormatter.format(price)}</p>
+      <Link to={`product/${id}`}>
         <button className={`${styles.buyButton} bump`} onClick={handleOnClick}>
           Buy
         </button>
       </Link>
     </div>
   );
+};
+
+ItemCard.propTypes = {
+  brand: PropTypes.string,
+  model: PropTypes.string,
+  imgUrl: PropTypes.string,
+  price: PropTypes.string,
+  id: PropTypes.string,
 };
