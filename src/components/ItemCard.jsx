@@ -12,7 +12,7 @@ export const ItemCard = ({ id, brand, model, imgUrl, price }) => {
 
   return (
     <div className={styles.container}>
-      <img src={imgUrl} />
+      <img src={imgUrl} alt={model} />
       <p className={styles.specs}>
         {model} by <strong>{brand}</strong>
       </p>
