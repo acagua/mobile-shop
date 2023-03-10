@@ -6,7 +6,7 @@ import styles from '../styles/ProductList.module.css';
 
 export const ProductList = () => {
   return (
-    <>
+    <div className="fadeIn">
       <div className={styles.heading}>
         <h2 className={styles.title}> Device List </h2>
         <Search />
@@ -27,6 +27,6 @@ export const ProductList = () => {
         <ItemCard />
         <ItemCard />
       </section>
-    </>
+    </div>
   );
 };

@@ -1,0 +1,25 @@
+.heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.backLink {
+  position: fixed;
+  top: 50%;
+  padding: 0 1rem;
+}
+
+.container {
+  display: flex;
+  padding: 0 1rem 0 6rem;
+}
+
+.image {
+  background-color: green;
+  width: 40rem;
+  max-height: 20rem;
+  object-fit: cover;
+}
