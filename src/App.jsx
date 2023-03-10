@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { Breadcrumb } from './components/Breadcrumb';
+import { Breadcrumbs } from './components/Breadcrumbs';
 import { NavBar } from './components/NavBar';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
         <NavBar />
       </header>
       <main>
-        <Breadcrumb />
+        <Breadcrumbs />
         <Outlet />
       </main>
     </>
