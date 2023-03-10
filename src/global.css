@@ -1,3 +1,12 @@
+:root {
+  --lightblue: #e4fbff;
+  --brightblue: #29d3ee;
+  --blue: #2d526f;
+  --darkblue: #1e374b;
+  --gray: #f0f0f0;
+  --white: #f8f8f8;
+}
+
 body {
   margin: 0;
   background-color: var(--gray);
@@ -11,15 +20,6 @@ header {
   top: 0;
   position: fixed;
   width: 100%;
-}
-
-:root {
-  --lightblue: #87e7f6;
-  --brightblue: #29d3ee;
-  --blue: #2d526f;
-  --darkblue: #1e374b;
-  --gray: #f0f0f0;
-  --white: #f8f8f8;
 }
 
 .fade-in {

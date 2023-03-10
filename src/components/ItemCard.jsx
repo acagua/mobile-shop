@@ -3,7 +3,7 @@ import React from 'react';
 import cat from '../assets/cat.jpeg';
 import styles from '../styles/ItemCard.module.css';
 import { currencyFormatter } from '../utils/currency';
-
+import { Link } from 'react-router-dom';
 export const ItemCard = () => {
   const handleOnClick = () => {
     //
@@ -16,9 +16,11 @@ export const ItemCard = () => {
         iPhone by <strong>Apple</strong>
       </p>
       <p className={styles.price}>{currencyFormatter.format(500)}</p>
-      <button className={`${styles.buyButton} bump`} onClick={handleOnClick}>
-        Buy
-      </button>
+      <Link to={`product/${1}`}>
+        <button className={`${styles.buyButton} bump`} onClick={handleOnClick}>
+          Buy
+        </button>
+      </Link>
     </div>
   );
 };
