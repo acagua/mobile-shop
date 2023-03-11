@@ -5,8 +5,20 @@
   border-radius: 1rem;
 }
 
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.cta > span {
+  font-size: 2rem;
+  color: var(--darkblue);
+  font-weight: var(--bold);
+}
+
 .addBtn {
   width: 50%;
-  margin-top: 1rem;
   font-size: 1.2rem;
 }

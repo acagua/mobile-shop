@@ -13,7 +13,6 @@ export const ProductList = () => {
 
   const handleOnChange = ({ target }) => {
     setQuery(target.value.toLowerCase());
-    console.log(searchRef.current.value);
   };
 
   const filteredItems = products.filter(
@@ -21,7 +20,6 @@ export const ProductList = () => {
       product.brand.toLowerCase().includes(query) || product.model.toLowerCase().includes(query),
   );
 
-  console.log({ filteredItems });
   const showItems = filteredItems.length ? filteredItems : products;
 
   return (

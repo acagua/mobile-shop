@@ -3,7 +3,6 @@ import { Link, useLoaderData } from 'react-router-dom';
 import styles from '../styles/ProductDetails.module.css';
 import { ReactComponent as BackIcon } from '../assets/back.svg';
 import { ItemDescription } from '../components/ItemDescription/ItemDescription';
-import { currency } from '../utils/formatter';
 import { ItemActions } from '../components/ItemActions/ItemActions';
 
 export const ProductDetails = () => {
@@ -15,7 +14,6 @@ export const ProductDetails = () => {
         <h2 className={styles.title}>
           {brand} - {model}
         </h2>
-        <span className={styles.price}>{currency.format(price)}</span>
       </div>
       <Link to="/" className={styles.backLink}>
         <BackIcon />
@@ -23,7 +21,7 @@ export const ProductDetails = () => {
       <section className={`${styles.container} fadeIn`}>
         <img src={imgUrl} className={styles.image} alt={model} />
         <div className={styles.productInfo}>
-          <ItemActions options={options} />
+          <ItemActions options={options} price={price} />
           <ItemDescription specs={specs} />
         </div>
       </section>

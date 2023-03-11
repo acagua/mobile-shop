@@ -4,8 +4,6 @@ import { ActionCard } from './ActionCard';
 import styles from '../styles/Action.module.css';
 
 export const Action = ({ title, configurations }) => {
-  console.log({ configurations });
-
   return (
     <div className={styles.container}>
       <h3> Available {title}:</h3>

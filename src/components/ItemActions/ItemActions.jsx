@@ -2,18 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles/ItemActions.module.css';
 import { Action } from './components/Action';
+import { currency } from '../../utils/formatter';
 
-export const ItemActions = ({ options }) => {
-  console.log(options);
+export const ItemActions = ({ options, price }) => {
   return (
     <form className={styles.container}>
-      {Object.entries(options).map(([key, value]) => {
-        console.log({ key, value });
-        return <Action key={key} title={key} configurations={value} />;
-      })}
-      <button className={styles.addBtn} type="submit">
-        Add to Cart
-      </button>
+      {Object.entries(options).map(([key, value]) => (
+        <Action key={key} title={key} configurations={value} />
+      ))}
+      <div className={styles.cta}>
+        <span>{currency.format(price)}</span>
+        <button className={styles.addBtn} type="submit">
+          Add to Cart
+        </button>
+      </div>
     </form>
   );
 };
@@ -37,4 +39,5 @@ ItemActions.propTypes = {
       ),
     },
   ),
+  price: PropTypes.string,
 };
