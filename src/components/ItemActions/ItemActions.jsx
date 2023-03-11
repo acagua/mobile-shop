@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../styles/ItemActions.module.css';
-import { Action } from './Action';
+import styles from './styles/ItemActions.module.css';
+import { Action } from './components/Action';
 
 export const ItemActions = ({ options }) => {
   console.log(options);

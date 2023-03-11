@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Spec } from './Spec';
-import styles from '../styles/ItemDescription.module.css';
-import { ReactComponent as ArrowIcon } from '../assets/arrow.svg';
+import { Spec } from './components/Spec';
+import styles from './styles/ItemDescription.module.css';
+import { ReactComponent as ArrowIcon } from '../../assets/arrow.svg';
 
 export const ItemDescription = ({ specs }) => {
   const [showSpecs, setShowSpecs] = useState(false);

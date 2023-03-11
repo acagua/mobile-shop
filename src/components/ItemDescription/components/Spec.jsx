@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from '../styles/Spec.module.css';
-import { objectKeyToText } from '../utils/formatter';
+import { objectKeyToText } from '../../../utils/formatter';
 import { Description } from './Description';
 
 export const Spec = ({ title, info }) => {

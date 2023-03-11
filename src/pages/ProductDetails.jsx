@@ -2,9 +2,9 @@ import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import styles from '../styles/ProductDetails.module.css';
 import { ReactComponent as BackIcon } from '../assets/back.svg';
-import { ItemDescription } from '../components/ItemDescription';
-import { ItemActions } from '../components/ItemActions';
+import { ItemDescription } from '../components/ItemDescription/ItemDescription';
 import { currency } from '../utils/formatter';
+import { ItemActions } from '../components/ItemActions/ItemActions';
 
 export const ProductDetails = () => {
   const details = useLoaderData();

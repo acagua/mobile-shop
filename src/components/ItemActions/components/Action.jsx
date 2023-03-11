@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ActionCard } from './ActionCard';
+import styles from '../styles/Action.module.css';
 
 export const Action = ({ title, configurations }) => {
   console.log({ configurations });
   return (
-    <div>
+    <div className={styles.container}>
       <p> Available {title}:</p>
       {configurations.map((configuration) => (
         <ActionCard key={configuration.code} text={configuration.name} color={title === 'colors'} />
