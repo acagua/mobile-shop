@@ -10,12 +10,7 @@ export const Breadcrumbs = () => {
         Products
       </Link>
       {pathname.startsWith('/product/') && (
-        <>
-          <span className="breadcrumb-arrow"> / </span>
-          <Link to="/products/:productsId" className={styles.breadcrumbNotCurrent}>
-            Product 1
-          </Link>
-        </>
+        <span className="breadcrumb-arrow"> / Product Details</span>
       )}
     </nav>
   );

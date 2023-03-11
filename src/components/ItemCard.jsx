@@ -17,7 +17,7 @@ export const ItemCard = ({ id, brand, model, imgUrl, price }) => {
         {model} by <strong>{brand}</strong>
       </p>
       <p className={styles.price}>{currency.format(price)}</p>
-      <Link to={`product/${id}`}>
+      <Link to={`product/${id}`} className={styles.link}>
         <button className={`${styles.buyButton} bump`} onClick={handleOnClick}>
           Buy
         </button>

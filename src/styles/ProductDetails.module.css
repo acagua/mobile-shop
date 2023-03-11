@@ -1,6 +1,14 @@
 .header {
-  padding-left: 2rem;
-  margin-left: 2rem;
+  margin: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--darkblue);
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 .title {
@@ -22,9 +30,9 @@
 }
 
 .image {
-  background-color: green;
-  width: 20rem;
-  height: auto;
-  /* max-height: 20rem; */
+  height: 25rem;
+  max-height: 25rem;
   object-fit: cover;
+  margin-right: 2rem;
+  padding-bottom: 2rem;
 }
