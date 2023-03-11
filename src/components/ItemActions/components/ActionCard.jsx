@@ -2,16 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from '../styles/ActionCard.module.css';
 
-export const ActionCard = ({ color, text }) => {
+export const ActionCard = ({ configurationName, isColor, code, text }) => {
   return (
     <div className={styles.container}>
-      {color && <div className={styles.color} style={{ backgroundColor: `${text}` }} />}
-      {text}
+      <input type="radio" id={code} name={configurationName} value={code} />
+      <label htmlFor={code}>{text}</label>
+      {isColor && <div className={styles.color} style={{ backgroundColor: `${text}` }} />}
     </div>
   );
 };
 
 ActionCard.propTypes = {
-  color: PropTypes.bool,
+  configurationName: PropTypes.string,
+  isColor: PropTypes.bool,
   text: PropTypes.string,
+  code: PropTypes.number,
 };

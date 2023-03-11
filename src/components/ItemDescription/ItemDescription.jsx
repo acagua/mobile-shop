@@ -15,7 +15,7 @@ export const ItemDescription = ({ specs }) => {
     <>
       <button className={styles.container} onClick={handleClick}>
         <span>Specifications</span>
-        <ArrowIcon className={showSpecs ? styles.iconExpand : styles.iconCollapsed} />
+        <ArrowIcon className={`${styles.icon} ${!showSpecs ? styles.iconCollapsed : ''}`} />
       </button>
       <div className={`${styles.specs} fadeIn ${showSpecs ? styles.show : styles.hide}`}>
         {Object.entries(specs).map(([key, value]) => (

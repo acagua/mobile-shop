@@ -11,6 +11,7 @@ export const ItemActions = ({ options }) => {
         console.log({ key, value });
         return <Action key={key} title={key} configurations={value} />;
       })}
+      <button> Add to Cart </button>
     </div>
   );
 };

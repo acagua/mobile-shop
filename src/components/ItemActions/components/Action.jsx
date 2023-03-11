@@ -7,9 +7,15 @@ export const Action = ({ title, configurations }) => {
   console.log({ configurations });
   return (
     <div className={styles.container}>
-      <p> Available {title}:</p>
+      <h3> Available {title}:</h3>
       {configurations.map((configuration) => (
-        <ActionCard key={configuration.code} text={configuration.name} color={title === 'colors'} />
+        <ActionCard
+          configurationName={title}
+          key={configuration.code}
+          code={configuration.code}
+          text={configuration.name}
+          isColor={title === 'colors'}
+        />
       ))}
     </div>
   );

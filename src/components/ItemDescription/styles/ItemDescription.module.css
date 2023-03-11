@@ -1,16 +1,20 @@
 .container {
-  background-color: var(--darkblue);
+  background-color: darkgrey;
   border: none;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--white);
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 0.7rem;
+  font-weight: bold;
 }
 
+.icon {
+  height: 2rem;
+}
 .specs.hide {
   display: none;
 }
@@ -21,6 +25,9 @@
 
 .specs > div:nth-child(odd) {
   background-color: var(--lightblue);
+}
+.specs > div:nth-child(even) {
+  background-color: var(--gray);
 }
 
 .iconCollapsed {
