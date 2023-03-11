@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import styles from '../styles/ItemCard.module.css';
 import { currency } from '../utils/formatter';
 import { Link } from 'react-router-dom';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export const ItemCard = ({ id, brand, model, imgUrl, price }) => {
   const handleOnClick = () => {
@@ -13,7 +12,7 @@ export const ItemCard = ({ id, brand, model, imgUrl, price }) => {
 
   return (
     <div className={styles.container}>
-      <LazyLoadImage src={imgUrl} alt={model} />
+      <img src={imgUrl} alt={model} />
       <p className={styles.specs}>
         {model} by <strong>{brand}</strong>
       </p>
