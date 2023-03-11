@@ -22,7 +22,7 @@ export const ProductDetails = () => {
       </Link>
       <section className={`${styles.container} fadeIn`}>
         <img src={imgUrl} className={styles.image} alt={model} />
-        <div>
+        <div className={styles.productInfo}>
           <ItemActions options={options} />
           <ItemDescription specs={specs} />
         </div>
