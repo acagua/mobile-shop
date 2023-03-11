@@ -1,17 +1,21 @@
 .container {
   background-color: darkgrey;
-  border: none;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1.3rem;
-  color: var(--white);
   padding: 0.2rem 0.5rem;
-  border-radius: 0.7rem;
   font-weight: bold;
 }
 
+.container > h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.container:hover {
+  background-color: darkgray;
+}
 .icon {
   height: 2rem;
 }

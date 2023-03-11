@@ -1,6 +1,7 @@
 .container {
   padding: 1rem;
   background-color: var(--gray);
+  font-family: var(--secondaryFont);
 }
 
 .breadcrumbNotCurrent {

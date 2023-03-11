@@ -5,18 +5,22 @@ import styles from '../styles/Action.module.css';
 
 export const Action = ({ title, configurations }) => {
   console.log({ configurations });
+
   return (
     <div className={styles.container}>
       <h3> Available {title}:</h3>
-      {configurations.map((configuration) => (
-        <ActionCard
-          configurationName={title}
-          key={configuration.code}
-          code={configuration.code}
-          text={configuration.name}
-          isColor={title === 'colors'}
-        />
-      ))}
+      <div className={styles.configurations}>
+        {configurations.map(({ code, name }, index) => (
+          <ActionCard
+            configurationName={title}
+            key={code}
+            code={code}
+            text={name}
+            isColor={title === 'colors'}
+            isChecked={!index}
+          />
+        ))}
+      </div>
     </div>
   );
 };

@@ -11,18 +11,19 @@ export const ItemCard = ({ id, brand, model, imgUrl, price }) => {
   };
 
   return (
-    <div className={styles.container}>
+    <article className={styles.container}>
       <img src={imgUrl} alt={model} />
-      <p className={styles.specs}>
-        {model} by <strong>{brand}</strong>
-      </p>
+      <div className={styles.title}>
+        <h3>{model}</h3>
+        <h4>{brand}</h4>
+      </div>
       <p className={styles.price}>{currency.format(price)}</p>
       <Link to={`product/${id}`} className={styles.link}>
-        <button className={`${styles.buyButton} bump`} onClick={handleOnClick}>
+        <button className={`bump`} onClick={handleOnClick}>
           Buy
         </button>
       </Link>
-    </div>
+    </article>
   );
 };
 

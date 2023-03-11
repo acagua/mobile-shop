@@ -6,13 +6,15 @@ import { Action } from './components/Action';
 export const ItemActions = ({ options }) => {
   console.log(options);
   return (
-    <div className={styles.container}>
+    <form className={styles.container}>
       {Object.entries(options).map(([key, value]) => {
         console.log({ key, value });
         return <Action key={key} title={key} configurations={value} />;
       })}
-      <button> Add to Cart </button>
-    </div>
+      <button className={styles.addBtn} type="submit">
+        Add to Cart
+      </button>
+    </form>
   );
 };
 

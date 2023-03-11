@@ -1,2 +1,7 @@
 .container {
 }
+
+.configurations {
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -4,7 +4,14 @@
   --blue: #2d526f;
   --darkblue: #1e374b;
   --gray: #f0f0f0;
-  --white: #f8f8f8;
+  --white: #fdfdfd;
+
+  --mainFont: 'Montserrat', sans-serif;
+  --secondaryFont: 'Poppins', sans-serif;
+
+  --thin: 200;
+  --regular: 400;
+  --bold: 600;
 }
 
 body {
@@ -36,22 +43,37 @@ header {
   }
 }
 
-.bump:active {
-  transform: scale(0.95);
-  transition-duration: 0.2s;
-  animation: bump;
+button {
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 0.7rem;
+  border: none;
+  padding: 0.4rem;
+  width: 100%;
 }
 
-@keyframes bump {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.95);
-  }
+button:hover {
+  background-color: var(--darkblue);
 }
 
 a {
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--mainFont);
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+span,
+button,
+p,
+a  {
+  font-family: var(--secondaryFont);
 }

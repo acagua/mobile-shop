@@ -14,7 +14,7 @@ export const ItemDescription = ({ specs }) => {
   return (
     <>
       <button className={styles.container} onClick={handleClick}>
-        <span>Specifications</span>
+        <h3>Specifications</h3>
         <ArrowIcon className={`${styles.icon} ${!showSpecs ? styles.iconCollapsed : ''}`} />
       </button>
       <div className={`${styles.specs} fadeIn ${showSpecs ? styles.show : styles.hide}`}>

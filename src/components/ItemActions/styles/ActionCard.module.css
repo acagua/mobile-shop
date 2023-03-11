@@ -1,8 +1,28 @@
 .container {
+  border-radius: 1rem;
+  margin: 1rem;
+  display: flex;
+  padding: 0.5rem;
+  align-items: center;
+  border: solid darkgray 1px;
+  background-color: var(--white);
 }
+
+.container:has(> input[type='radio']:checked) {
+  border: solid var(--darkblue) 3px;
+}
+.container:not(:has(> input[type='radio']:checked)):hover {
+  border: solid var(--darkblue) 1px;
+}
+
+input[type='radio'] {
+  appearance: none;
+}
+
 .color {
   height: 2rem;
   width: 2rem;
   border-radius: 2rem;
   border: solid var(--darkblue) 2px;
+  margin-right: 0.5rem;
 }
