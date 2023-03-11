@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from '../styles/ActionCard.module.css';
 
 export const ActionCard = ({ color, text }) => {
   return (
-    <div>
-      {color && <div> Color Indicator</div>}
+    <div className={styles.container}>
+      {color && <div className={styles.color} style={{ backgroundColor: `${text}` }} />}
       {text}
     </div>
   );

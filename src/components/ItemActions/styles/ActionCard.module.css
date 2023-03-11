@@ -1,0 +1,8 @@
+.container {
+}
+.color {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 2rem;
+  border: solid var(--darkblue) 2px;
+}
