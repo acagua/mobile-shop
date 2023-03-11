@@ -7,8 +7,7 @@ import { ItemActions } from '../components/ItemActions';
 
 export const ProductDetails = () => {
   const details = useLoaderData();
-  const { imgUrl } = details;
-  console.log(JSON.stringify(details));
+  const { imgUrl, options, ...specs } = details;
   return (
     <>
       <Link to="/" className={styles.backLink}>
@@ -17,8 +16,8 @@ export const ProductDetails = () => {
       <section className={`${styles.container} fadeIn`}>
         <img src={imgUrl} className={styles.image} />
         <div>
-          <ItemDescription />
-          <ItemActions />
+          <ItemDescription specs={specs} />
+          <ItemActions options={options} />
         </div>
       </section>
     </>

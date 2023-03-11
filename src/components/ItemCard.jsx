@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from '../styles/ItemCard.module.css';
-import { currencyFormatter } from '../utils/currency';
+import { currency } from '../utils/formatter';
 import { Link } from 'react-router-dom';
 
 export const ItemCard = ({ id, brand, model, imgUrl, price }) => {
@@ -16,7 +16,7 @@ export const ItemCard = ({ id, brand, model, imgUrl, price }) => {
       <p className={styles.specs}>
         {model} by <strong>{brand}</strong>
       </p>
-      <p className={styles.price}>{currencyFormatter.format(price)}</p>
+      <p className={styles.price}>{currency.format(price)}</p>
       <Link to={`product/${id}`}>
         <button className={`${styles.buyButton} bump`} onClick={handleOnClick}>
           Buy
