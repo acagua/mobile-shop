@@ -1,6 +1,12 @@
+.container {
+  padding: 0.5rem 1rem;
+}
+
 .title {
   text-transform: capitalize;
+  font-weight: 600;
 }
 
 .description {
+  display: inline-flex;
 }

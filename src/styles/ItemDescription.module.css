@@ -1,0 +1,27 @@
+.container {
+  background-color: var(--darkblue);
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--white);
+  padding: 0.5rem 1rem;
+}
+
+.specs.hide {
+  display: none;
+}
+
+.specs.show {
+  display: block;
+}
+
+.specs > div:nth-child(odd) {
+  background-color: var(--lightblue);
+}
+
+.iconCollapsed {
+  transform: rotate(-90deg);
+}

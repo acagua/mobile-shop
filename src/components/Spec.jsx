@@ -7,10 +7,10 @@ import { Description } from './Description';
 export const Spec = ({ title, info }) => {
   return (
     <div className={styles.container}>
-      <div className={styles.title}>{objectKeyToText(title)}</div>
-      <div className={styles.description}>
+      <span className={styles.title}>{objectKeyToText(title)}: </span>
+      <span className={styles.description}>
         <Description info={info} />
-      </div>
+      </span>
     </div>
   );
 };
