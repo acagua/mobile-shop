@@ -1,6 +1,5 @@
 import React, { lazy, Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from '../App';
 import { Loading } from '../components/Loading';
 import { NotFoundError } from '../pages/NotFoundError';
 import { detailsLoader, productsLoader } from '../utils/loaders';
@@ -9,10 +8,16 @@ const LazyProductList = lazy(() => import('../pages/ProductList'));
 
 const LazyProductDetails = lazy(() => import('../pages/ProductDetails'));
 
+const LazyApp = lazy(() => import('../App'));
+
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: (
+      <Suspense fallback={<Loading />}>
+        <LazyApp />
+      </Suspense>
+    ),
     children: [
       {
         path: '/',

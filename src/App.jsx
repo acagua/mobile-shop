@@ -1,9 +1,11 @@
-import { createContext, useState } from 'react';
+import { createContext, lazy, Suspense, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Breadcrumbs } from './components/Breadcrumbs';
-import { NavBar } from './components/NavBar';
+import { Loading } from './components/Loading';
 
 export const ShopContext = createContext();
+
+const LazyNavBar = lazy(() => import('./components/NavBar'));
 
 function App() {
   const [cartItems, setCartItems] = useState(0);
@@ -18,7 +20,9 @@ function App() {
       }}
     >
       <header>
-        <NavBar />
+        <Suspense fallback={<Loading />}>
+          <LazyNavBar />
+        </Suspense>
       </header>
       <main>
         <Breadcrumbs />
