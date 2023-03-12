@@ -11,11 +11,9 @@ export const NavBar = () => {
   console.log({ cartItems });
   return (
     <nav className={styles.container}>
-      <Link to="/">
-        <div className={styles.logo}>
-          <LogoIcon />
-          <h1> The Mobile Vault</h1>
-        </div>
+      <Link className={styles.logo} to="/">
+        <LogoIcon />
+        <h1>The Mobile Vault</h1>
       </Link>
       <div>
         <CartIcon className={styles.cart} value={3} />

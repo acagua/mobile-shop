@@ -18,5 +18,12 @@ export const customFetch = async (endpoint) => {
    } 
  */
 export const postCartItem = (data) => {
-  fetch(cartEndpoint, { method: 'POST', body: JSON.stringify(data) });
+  return fetch(cartEndpoint, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
 };

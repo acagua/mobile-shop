@@ -11,14 +11,6 @@ svg {
   padding: 0 2rem;
   justify-content: space-between;
 }
-.container::before {
-  content: '';
-  position: absolute;
-  height: 5rem;
-  width: 80%;
-  left: 10%;
-  border-bottom: 1px solid var(--darkblue);
-}
 
 .logo {
   align-items: center;
