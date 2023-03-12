@@ -10,15 +10,18 @@
   align-items: center;
   justify-content: space-around;
   margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
 .cta > span {
   font-size: 2rem;
   color: var(--darkblue);
   font-weight: var(--bold);
+  margin: 0 1rem;
 }
 
 .addBtn {
   width: 50%;
   font-size: 1.2rem;
+  min-width: 13rem;
 }
