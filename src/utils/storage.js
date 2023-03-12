@@ -19,7 +19,6 @@ export const getLocalStorage = (key) => {
   }
   const currentDate = new Date();
   const obj = JSON.parse(storedValue);
-  console.log(obj);
   if (obj.expireDate < currentDate.getTime()) {
     return null;
   }
