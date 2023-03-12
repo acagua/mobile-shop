@@ -4,9 +4,9 @@ import styles from './styles/ItemActions.module.css';
 import { Action } from './components/Action';
 import { currency } from '../../utils/formatter';
 
-export const ItemActions = ({ options, price }) => {
+export const ItemActions = ({ options, price, onSubmit }) => {
   return (
-    <form className={styles.container}>
+    <form className={styles.container} onSubmit={onSubmit}>
       {Object.entries(options).map(([key, value]) => (
         <Action key={key} title={key} configurations={value} />
       ))}
@@ -40,4 +40,5 @@ ItemActions.propTypes = {
     },
   ),
   price: PropTypes.string,
+  onSubmit: PropTypes.func,
 };

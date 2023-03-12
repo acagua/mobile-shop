@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-import styles from '../styles/ActionCard.module.css';
+import styles from '../styles/ColorAction.module.css';
 
-export const ActionCard = ({ configurationName, isColor, code, text, isChecked }) => {
+export const ColorAction = ({ configurationName, code, text, isChecked }) => {
   const inputRef = useRef();
 
   const handleSelect = () => {
@@ -10,7 +10,7 @@ export const ActionCard = ({ configurationName, isColor, code, text, isChecked }
   };
   return (
     <div className={styles.container} onClick={handleSelect}>
-      {isColor && <div className={styles.color} style={{ backgroundColor: `${text}` }} />}
+      <div className={styles.color} style={{ backgroundColor: `${text}` }} />
       <label htmlFor={code}>{text}</label>
       <input
         type="radio"
@@ -24,9 +24,8 @@ export const ActionCard = ({ configurationName, isColor, code, text, isChecked }
   );
 };
 
-ActionCard.propTypes = {
+ColorAction.propTypes = {
   configurationName: PropTypes.string,
-  isColor: PropTypes.bool,
   text: PropTypes.string,
   code: PropTypes.number,
   isChecked: PropTypes.bool,

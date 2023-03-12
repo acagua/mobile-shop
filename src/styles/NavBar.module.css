@@ -52,3 +52,16 @@ svg {
   margin-right: 4rem;
   font-size: 1rem;
 }
+
+.badge {
+  color: var(--white);
+  background: var(--brightblue);
+  border-radius: 50%;
+  padding: 0.1rem 0.3rem;
+  position: relative;
+  text-align: center;
+  right: 1.8rem;
+  bottom: 1.8rem;
+  display: inline-block;
+  width: 1.2rem;
+}

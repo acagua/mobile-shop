@@ -1,23 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ActionCard } from './ActionCard';
+import { ColorAction } from './ColorAction';
 import styles from '../styles/Action.module.css';
+import { ListAction } from './ListAction';
 
 export const Action = ({ title, configurations }) => {
   return (
     <div className={styles.container}>
       <h3> Available {title}:</h3>
       <div className={styles.configurations}>
-        {configurations.map(({ code, name }, index) => (
-          <ActionCard
-            configurationName={title}
-            key={code}
-            code={code}
-            text={name}
-            isColor={title === 'colors'}
-            isChecked={!index}
-          />
-        ))}
+        {title === 'colors' ? (
+          configurations.map(({ code, name }, index) => (
+            <ColorAction
+              configurationName={title}
+              key={code}
+              code={code}
+              text={name}
+              isChecked={!index}
+            />
+          ))
+        ) : (
+          <ListAction configurationName={title} configurations={configurations} />
+        )}
       </div>
     </div>
   );
