@@ -8,7 +8,6 @@ import { ShopContext } from '../App';
 export const NavBar = () => {
   const { cartItems } = useContext(ShopContext);
 
-  console.log({ cartItems });
   return (
     <nav className={styles.container}>
       <Link className={styles.logo} to="/">

@@ -8,7 +8,6 @@ export const ShopContext = createContext();
 function App() {
   const [cartItems, setCartItems] = useState(0);
   const [currentProduct, setCurrentProduct] = useState('');
-  console.log(cartItems);
   return (
     <ShopContext.Provider
       value={{
