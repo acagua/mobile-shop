@@ -21,7 +21,7 @@ export const postCartItem = (data) => {
   return fetch(cartEndpoint, {
     method: 'POST',
     headers: {
-      Accept: 'application/json',
+      Accept: '*/*',
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(data),

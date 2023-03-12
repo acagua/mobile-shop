@@ -30,7 +30,13 @@ export const ProductDetails = () => {
     })
       .then((response) => response.json())
       .then(({ count }) => {
-        setCartItems(count);
+        /*
+          Cart endpoint is working fine in Clients like postman
+          But when fetching from the browser there are some issues in requests 
+          not letting the cookie to be set/send in the browser. 
+          Workaround fallback for when cookie is not set (creates new session on every call)
+        */
+        setCartItems((prev) => (count > 1 ? count : prev + 1));
       });
   };
 
